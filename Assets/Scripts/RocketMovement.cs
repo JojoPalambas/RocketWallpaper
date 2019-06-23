@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RocketMovement : MonoBehaviour
 {
+    public GameObject followingCamera;
+
     public bool isPlayer;
 
     public float curveAmplitude;
@@ -27,5 +29,6 @@ public class RocketMovement : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x + xSpeed * Time.deltaTime, transform.position.y, transform.position.z);
         }
+        followingCamera.transform.position = new Vector3(transform.position.x, followingCamera.transform.position.y, followingCamera.transform.position.z);
     }
 }
