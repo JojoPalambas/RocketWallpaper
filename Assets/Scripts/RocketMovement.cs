@@ -7,6 +7,8 @@ public class RocketMovement : MonoBehaviour
     public float curveAmplitude;
     public float curveFrequency;
 
+    public float xSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,6 @@ public class RocketMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, Mathf.Sin(Time.time * curveFrequency) * curveAmplitude, transform.position.z);
+        transform.position = new Vector3(transform.position.x + xSpeed * Time.deltaTime, Mathf.Sin(Time.time * curveFrequency) * curveAmplitude, transform.position.z);
     }
 }
