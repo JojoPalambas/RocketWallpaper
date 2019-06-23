@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RocketMovement : MonoBehaviour
 {
+    public bool isPlayer;
+
     public float curveAmplitude;
     public float curveFrequency;
 
@@ -17,6 +19,13 @@ public class RocketMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x + xSpeed * Time.deltaTime, Mathf.Sin(Time.time * curveFrequency) * curveAmplitude, transform.position.z);
+        if (isPlayer)
+        {
+            transform.position = new Vector3(transform.position.x + xSpeed * Time.deltaTime, Mathf.Sin(Time.time * curveFrequency) * curveAmplitude, transform.position.z);
+        }
+        else
+        {
+            transform.position = new Vector3(transform.position.x + xSpeed * Time.deltaTime, transform.position.y, transform.position.z);
+        }
     }
 }
