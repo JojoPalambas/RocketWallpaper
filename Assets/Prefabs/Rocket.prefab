@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329409619529626871}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.769, y: -0.28, z: 4}
+  m_LocalPosition: {x: -0.769, y: -0.28, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6878952978470377356}
@@ -4891,7 +4891,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2836052800289282051}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.298, y: 0.476, z: 8}
+  m_LocalPosition: {x: -0.298, y: 0.476, z: 7}
   m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 6878952978470377356}
@@ -14410,10 +14410,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad05e4bd48d8984dbc12e1c1f227087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followingCamera: {fileID: 0}
   isPlayer: 1
   curveAmplitude: 0.5
   curveFrequency: 0.5
   xSpeed: 20
+  headAnimator: {fileID: 1610655653}
+  minHeadAnimationInterval: 20
+  maxHeadAnimationInterval: 30
 --- !u!1 &8055599317068109897
 GameObject:
   m_ObjectHideFlags: 0
@@ -14440,7 +14444,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8055599317068109897}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.6, y: -0.265, z: 3}
+  m_LocalPosition: {x: -0.6, y: -0.265, z: 4}
   m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 6878952978470377356}
@@ -19147,7 +19151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9047948083081090862}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.311, y: 0.481, z: 7}
+  m_LocalPosition: {x: -0.311, y: 0.481, z: 8}
   m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 6878952978470377356}
@@ -19728,7 +19732,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: -1
-      minScalar: 0
+      minScalar: -0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -23896,6 +23900,7 @@ GameObject:
   m_Component:
   - component: {fileID: 802984878043695637}
   - component: {fileID: 3353040187860731489}
+  - component: {fileID: 1610655653}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -23965,3 +23970,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1610655653
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9107965388720379479}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 610f537b9365a7c4689c099533df1356, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

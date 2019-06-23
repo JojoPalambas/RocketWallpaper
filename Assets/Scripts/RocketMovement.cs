@@ -13,14 +13,28 @@ public class RocketMovement : MonoBehaviour
 
     public float xSpeed;
 
+    public Animator headAnimator;
+    public float minHeadAnimationInterval;
+    public float maxHeadAnimationInterval;
+    private float headAnimationCooldown;
+
     // Start is called before the first frame update
     void Start()
     {
+        headAnimator.SetBool("open", false);
+        headAnimationCooldown = Random.Range(minHeadAnimationInterval, maxHeadAnimationInterval);
     }
 
     // Update is called once per frame
     void Update()
     {
+        headAnimationCooldown -= Time.deltaTime;
+        if (headAnimationCooldown < 0)
+        {
+            headAnimator.SetBool("open", !headAnimator.GetBool("open"));
+            headAnimationCooldown = Random.Range(minHeadAnimationInterval, maxHeadAnimationInterval);
+        }
+
         if (isPlayer)
         {
             transform.position = new Vector3(transform.position.x + xSpeed * Time.deltaTime, Mathf.Sin(Time.time * curveFrequency) * curveAmplitude, transform.position.z);
