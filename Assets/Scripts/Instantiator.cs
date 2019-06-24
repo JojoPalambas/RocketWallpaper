@@ -29,7 +29,7 @@ public class InstantiationParameters
             coolDown = Random.Range(minInterval, maxInterval);
             GameObject.Instantiate(
                 prefab,
-                new Vector3(parent.transform.position.x, parent.transform.position.y + Random.Range(-ySummonRadius, ySummonRadius), parent.transform.position.z),
+                new Vector3(parent.transform.position.x, parent.transform.position.y + Random.Range(-ySummonRadius, ySummonRadius), prefab.transform.position.z),
                 new Quaternion());
         }
     }
