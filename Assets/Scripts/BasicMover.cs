@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProgramManager : MonoBehaviour
+public class BasicMover : MonoBehaviour
 {
+    public Vector3 translation;
+    public Vector3 rotation;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -12,5 +15,7 @@ public class ProgramManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.Translate(translation * Time.deltaTime);
+        transform.Rotate(rotation * Time.deltaTime);
     }
 }

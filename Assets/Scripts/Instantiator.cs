@@ -21,7 +21,7 @@ public class InstantiationParameters
         coolDown = Random.Range(minInterval, maxInterval);
     }
 
-    public void Update()
+    public void Frame()
     {
         coolDown -= Time.deltaTime;
         if (coolDown < 0)
@@ -53,7 +53,7 @@ public class Instantiator : MonoBehaviour
     {
         foreach (InstantiationParameters ip in instantiators)
         {
-            ip.Update();
+            ip.Frame();
         }
     }
 }

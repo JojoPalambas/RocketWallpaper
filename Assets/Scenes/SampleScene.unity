@@ -368,7 +368,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfe99474becd5084da3462c81c5de0b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instantiators: []
+  instantiators:
+  - prefab: {fileID: 4734670769588691285, guid: 1a2bdda4cb15e8049a3a408398a67ed8,
+      type: 3}
+    ySummonRadius: 10
+    minInterval: 0.25
+    maxInterval: 1
 --- !u!1001 &4736362685712677010
 PrefabInstance:
   m_ObjectHideFlags: 0
