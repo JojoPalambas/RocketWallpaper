@@ -14581,6 +14581,15 @@ MonoBehaviour:
   headAnimator: {fileID: 1610655653}
   minHeadAnimationInterval: 20
   maxHeadAnimationInterval: 30
+  arm: {fileID: 2559064925396834294}
+  armSmoke: {fileID: 8055599317068109897}
+  armSparks: {fileID: 329409619529626871}
+  body: {fileID: 5917619877232726632}
+  mainPropellerSmoke: {fileID: 6527331727680812971}
+  topSmoke: {fileID: 9047948083081090862}
+  topSparks: {fileID: 2836052800289282051}
+  head: {fileID: 9107965388720379479}
+  passenger: {fileID: 1024141563852703266}
 --- !u!1 &8055599317068109897
 GameObject:
   m_ObjectHideFlags: 0

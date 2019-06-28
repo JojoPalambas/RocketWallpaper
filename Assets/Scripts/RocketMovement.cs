@@ -19,6 +19,16 @@ public class RocketMovement : MonoBehaviour
     public float maxHeadAnimationInterval;
     private float headAnimationCooldown;
 
+    public GameObject arm;
+    public GameObject armSmoke;
+    public GameObject armSparks;
+    public GameObject body;
+    public GameObject mainPropellerSmoke;
+    public GameObject topSmoke;
+    public GameObject topSparks;
+    public GameObject head;
+    public GameObject passenger;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,5 +59,19 @@ public class RocketMovement : MonoBehaviour
             background.transform.position = new Vector3(transform.position.x, background.transform.position.y, background.transform.position.z);
         if (followingCamera != null)
             followingCamera.transform.position = new Vector3(transform.position.x, followingCamera.transform.position.y, followingCamera.transform.position.z);
+    }
+
+    public void Transform()
+    {
+        arm.SetActive(false);
+        armSmoke.GetComponent<ParticleSystem>().Stop();
+        armSparks.GetComponent<ParticleSystem>().Stop();
+        mainPropellerSmoke.GetComponent<ParticleSystem>().Stop();
+        topSmoke.GetComponent<ParticleSystem>().Stop();
+        topSparks.GetComponent<ParticleSystem>().Stop();
+        head.SetActive(false);
+        passenger.SetActive(false);
+
+        body.GetComponent<Animator>().SetTrigger("transform");
     }
 }
