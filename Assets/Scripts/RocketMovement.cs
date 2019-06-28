@@ -44,7 +44,10 @@ public class RocketMovement : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x + xSpeed * Time.deltaTime, transform.position.y, transform.position.z);
         }
-        background.transform.position = new Vector3(transform.position.x, background.transform.position.y, background.transform.position.z);
-        followingCamera.transform.position = new Vector3(transform.position.x, followingCamera.transform.position.y, followingCamera.transform.position.z);
+
+        if (background != null)
+            background.transform.position = new Vector3(transform.position.x, background.transform.position.y, background.transform.position.z);
+        if (followingCamera != null)
+            followingCamera.transform.position = new Vector3(transform.position.x, followingCamera.transform.position.y, followingCamera.transform.position.z);
     }
 }
