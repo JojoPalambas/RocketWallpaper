@@ -221,7 +221,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1108807552}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -400,17 +401,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108807551}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 645918263}
-  m_Father: {fileID: 1535131080}
+  m_Father: {fileID: 519420032}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 512, y: 288}
+  m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1108807553
 MonoBehaviour:
@@ -442,7 +443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
@@ -463,7 +464,7 @@ Canvas:
   m_RenderMode: 2
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -584,8 +585,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 200}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1108807552}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -659,7 +659,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Transform
+  m_Text: 
 --- !u!222 &1638619309
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -746,6 +746,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 3448614981225402735, guid: 89f5212b40642444daf8b6b0f29865f1,
+        type: 3}
+      propertyPath: followingCamera
+      value: 
+      objectReference: {fileID: 519420028}
+    - target: {fileID: 3448614981225402735, guid: 89f5212b40642444daf8b6b0f29865f1,
+        type: 3}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 1535131078}
     - target: {fileID: 6878952978470377356, guid: 89f5212b40642444daf8b6b0f29865f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -801,15 +811,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3448614981225402735, guid: 89f5212b40642444daf8b6b0f29865f1,
-        type: 3}
-      propertyPath: followingCamera
-      value: 
-      objectReference: {fileID: 519420028}
-    - target: {fileID: 3448614981225402735, guid: 89f5212b40642444daf8b6b0f29865f1,
-        type: 3}
-      propertyPath: background
-      value: 
-      objectReference: {fileID: 1535131078}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89f5212b40642444daf8b6b0f29865f1, type: 3}
